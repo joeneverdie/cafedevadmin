@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="appAdmin">
+
+<head>
+	<meta charset="utf-8">
+	<title>CafeDevAdmin</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="js/libs/jquery.min.js"></script>
+	<script src="js/libs/poper.min.js"></script>
+	<script src="js/libs/angular.min.js"></script>
+	<script src="js/libs/angular-route.js"></script>
+	<script src="js/libs/bootstrap.min.js"></script>
+	<script src="js/libs/ui-bootstrap.min.js"></script>
+	<script src="js/libs/ui-bootstrap-tpls.min.js"></script>
+
+	<script src="js/app/app.js"></script>
+	<script src="js/app/services/const-uri.js"></script>
+	<script src="js/app/services/api-provider-service.js"></script>
+
+	<script src="js/app/factory/authentication-factory.js"></script>
+
+	<script src="js/app/controllers/index-controller.js"></script>
+	<script src="js/app/controllers/user-controller.js"></script>
+	<script src="js/app/controllers/topic-controller.js"></script>
+	<script src="js/app/controllers/article-controller.js"></script>
+	<script src="js/app/controllers/comment-controller.js"></script>
+	
+	<script src="js/app/controllers/modal/login-modal-controller.js"></script>
+</head>
+
+<body ng-controller="IndexCtrl">
+	<div class="header">
+		<div class="col-md-10">
+			<h3>CONSOLE WEB</h3>
+		</div>
+		<div class="col-md-2">
+			<div class="dropdown" ng-show="authenticated">
+				<button class="btn btn-warning" data-toggle="dropdown">Hi {{username}}
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+					<li><a href="#">Audit</a></li>
+					<li><a href="#/profile">Profile</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="col-md-2 left">
+			<li><a href="#/user">User</a></li>
+			<li><a href="#/article">Article</a></li>
+			<li><a href="#/topic">Topic</a></li>
+			<li><a href="#/comment">Comment</a></li>
+			<li><a href="#">A</a></li>
+			<li><a href="#">B</a></li>
+			<li><a href="#">C</a></li>
+			<li><a href="#">D</a></li>
+			<li><a href="#">E</a></li>
+			<li><a href="#">F</a></li>
+			<li><a href="#">G</a></li>
+			<li><a href="#">H</a></li>
+			<li><a href="#">I</a></li>
+			<li><a href="#">K</a></li>
+			<li><a href="#">L</a></li>
+			<li><a href="#">M</a></li>
+			<li><a href="#">N</a></li>
+			<li><a href="#">O</a></li>
+			<li><a href="#">Q</a></li>
+			<li><a href="#">P</a></li>
+			<li><a href="#">S</a></li>
+		</div>
+		<div class="col-md-10 right" ng-view></div>
+	</div>
+</body>
+</html>

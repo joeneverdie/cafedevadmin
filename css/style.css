@@ -1,0 +1,68 @@
+/* index */
+.header {
+    background-color: #666666;
+    height: 60px;
+    padding-left: 20px;
+    border-bottom: 5px solid blue;
+}
+.header h3 {
+    color: white;
+}
+.header .dropdown {
+    margin-top: 12px;
+}
+.content .right {
+    background-color: white;
+}
+.content .left {
+    background-color: #666666;
+    padding: 0;
+}
+.content .left li {
+    height: 40px;
+    list-style-type: none;
+    border-bottom: 1px solid #CCCCCC;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.content .left a {
+    color: white;
+}
+.content .left li:hover {
+    background-color: #BBBBBB;
+}
+/* .content .right {
+    height: 500px;
+    background-color: grey;
+} */
+
+/* login */
+
+/* user */
+
+.user .new {
+    margin-top: 5px;
+    margin-left: 50px;
+}
+.list .table .row:hover {
+    background-color: #BBBBBB;
+}
+
+/* modal */
+.modal-backdrop {
+    background-image: url('images/cat2.jpg');
+}
+.modal .form .form-group .col-md-6 {
+    padding-left: 0px !important ;
+    padding-right: 3px !important;
+}
+.modal-footer button{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+.modal-footer button:hover{
+    background-color: #008CBA;
+    color: white;
+}
+

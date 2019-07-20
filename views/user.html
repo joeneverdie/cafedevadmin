@@ -1,0 +1,38 @@
+<div class="user view">
+    <div class="title">
+        <div class="col-md-10">
+            <h4>User View</h4>
+        </div>
+        <div class="new">
+            <div class="col-md-2">
+                <button class="btn btn-warning" ng-click="openRegisterModal()">Create New User</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="user list">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr class="row">
+                    <th scope="col">#</th>
+                    <th scope="col">Avatar</th>
+                    <th scope="col">FirstName</th>
+                    <th scope="col">LastName</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row" ng-repeat="user in users">
+                    <th scope="row">{{user.id}}</th>
+                    <td><img ng-src="{{user.avatar}}"></td>
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.email}}</td>
+                    <td> <button ng-click="openUpdateModal()"><span class="glyphicon glyphicon-pencil"></span></button>
+                        <button><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

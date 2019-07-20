@@ -1,0 +1,22 @@
+<div class="modal-header">
+  <h2><b>Log In</b></h2>
+  <br>
+</div>
+<div class="modal-body">
+  <form class="form">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" placeholder="username" class="form-control" ng-model="credentials.username"
+        ng-keypress="($event.charCode==13)?login():return" />
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" placeholder="password" class="form-control" ng-model="credentials.password"
+        ng-keypress="($event.charCode==13)?login():return" />
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-default" ng-disabled="formLogin.$invalid" ng-click="login()">Login</button>
+  <h5 class="alert alert-danger" ng-show="isError">{{errorMessage}}</h5>
+</div>

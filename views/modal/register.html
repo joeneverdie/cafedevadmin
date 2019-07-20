@@ -1,0 +1,53 @@
+<div class="modal-header">
+    <h2><b>Register User</b></h2>
+</div>
+<div class="modal-body">
+    <form class="form">
+        <div class="form-group">
+            <div class="form-group col-md-6">
+                <label>First Name</label>
+                <input type="text" placeholder="Frist Name" class="form-control" ng-model="registerUser.firstName"
+                    ng-keypress="($event.charCode==13)?register():return" />
+            </div>
+            <div class="form-group col-md-6">
+                <label>Last Name</label>
+                <input type="text" placeholder="Last Name" class="form-control" ng-model="registerUser.lastName"
+                    ng-keypress="($event.charCode==13)?register():return" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" placeholder="Username" class="form-control" ng-model="registerUser.userName"
+                ng-keypress="($event.charCode==13)?register():return" />
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Password" class="form-control" ng-model="registerUser.password"
+                ng-keypress="($event.charCode==13)?register():return" />
+        </div>
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm Password" class="form-control"
+                ng-model="registerUser.comfirmPassword" ng-keypress="($event.charCode==13)?register():return" />
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Email" class="form-control" ng-model="registerUser.email"
+                ng-keypress="($event.charCode==13)?register():return" />
+        </div>
+        <div class="form-group">
+            <label>Role</label>
+            <div class="input-group">
+                <select type="text" class="form-control" ng-options="role.authority for role in roles"
+                    ng-model="roleName">
+                    <option value="">--Select Role--</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="register()">Register</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+    <h5 class="alert alert-danger" ng-show="isError">{{errorMessage}}</h5>
+</div>
